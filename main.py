@@ -25,3 +25,12 @@ def cipher(text, shift_amount):
             shifted += chr((ord(c) - ord('A') + shift_amount) % 26 + ord('A'))
     grouped = ' '.join(shifted[i:i+5] for i in range(0, len(shifted), 5))
     return grouped
+def decipher(text, shift_amount):
+    text = text.replace(' ', '')
+    unshifted = ''
+    for c in text:
+        if c.islower():
+            unshifted += chr((ord(c) - ord('a') - shift_amount) % 26 + ord('a'))
+        elif c.isupper():
+            unshifted += chr((ord(c) - ord('A') - shift_amount) % 26 + ord('A'))
+    return unshifted
