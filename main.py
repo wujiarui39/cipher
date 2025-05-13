@@ -12,3 +12,6 @@ def get_shift_amount():
     parser.add_argument('--shift', type=int, default=1)
     args = parser.parse_args()
     return args.shift
+
+def remove_nonletters(input_text):
+    return ''.join(c for c in input_text if c.isalpha())
