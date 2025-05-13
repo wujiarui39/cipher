@@ -1,1 +1,1 @@
-this code is written by jiarui wu
+print('this code is written by jiarui wu')
