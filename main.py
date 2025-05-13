@@ -1,5 +1,5 @@
 print('this code is written by jiarui wu')
-this is written by jingfan cai.
+print('this is written by jingfan cai.')
 
 import argparse
 import string
