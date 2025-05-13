@@ -15,3 +15,13 @@ def get_shift_amount():
 
 def remove_nonletters(input_text):
     return ''.join(c for c in input_text if c.isalpha())
+
+def cipher(text, shift_amount):
+    shifted = ''
+    for c in text:
+        if c.islower():
+            shifted += chr((ord(c) - ord('a') + shift_amount) % 26 + ord('a'))
+        elif c.isupper():
+            shifted += chr((ord(c) - ord('A') + shift_amount) % 26 + ord('A'))
+    grouped = ' '.join(shifted[i:i+5] for i in range(0, len(shifted), 5))
+    return grouped
